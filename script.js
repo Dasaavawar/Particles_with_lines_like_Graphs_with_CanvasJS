@@ -1,4 +1,4 @@
-const canvas = document.getElementById("canvas1");
+const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -92,7 +92,7 @@ function connect() {
             let distance = ((particlesArray[a].x - particlesArray[b].x)**2 + (particlesArray[a].y - particlesArray[b].y)**2)
             if (distance < (canvas.width/7) * (canvas.height/7)) {
                 opacityValue = 1 - (distance/20000)
-                ctx.strokeStyle = 'rgba(140, 85, 31, ' + opacityValue + ')';
+                ctx.strokeStyle = 'rgba(128, 128, 128, ' + opacityValue + ')';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
